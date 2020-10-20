@@ -7,7 +7,10 @@ class App extends React.Component {
     state = { advice: '' };
 
     componentDidMount() {
-        console.log('COMPONENT DID MOUNT');
+    }
+
+    const fetchAdvice = () => {
+        axios.get('https://api.adviceslip.com/advice');
     }
 
     render() {
